@@ -1,9 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './images/logo.svg';
+import './CSS/App.css';
+import buildings from './data.js';
+//import TableRow from './components/TableRow.js';
+//import TableHead from './components/TableHead.js';
+//import TableBody from './components/TableBody.js';
+import Table from './components/Table.js';
 
 function App() {
   return (
-    <div className="App">
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +23,10 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>*/
+    <div className='App'>
+      <h3>Редкие виды растений</h3>
+      <Table data={ buildings } amountRows="10"/>
     </div>
   );
 }

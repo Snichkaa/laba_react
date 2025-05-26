@@ -1,0 +1,141 @@
+/* Стили для формы фильтрации и сортировки*/
+form {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin-left: 0;
+}
+
+form p {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+form label {
+  flex: 0 0 120px;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  flex: 0 0 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Стили для формы сортировки */
+details {
+  margin-bottom: 20px;
+}
+
+details summary {
+  cursor: pointer;
+  outline: none;
+}
+
+details form p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+details form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+details form select {
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+details form input[type="checkbox"] {
+  margin-left: 8px;
+}
+
+/* Стили для кнопок формы */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  background-color: pink;
+}
+
+button[type="button"]:hover{
+  background-color:rgb(250, 162, 176) ;
+}
+/* Основные стили таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: pink;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(255, 228, 232);
+}
+
+
+/* Стили пагинации */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.page-number {
+  padding: 5px 10px;
+  border: 1px solid pink;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-number:hover {
+  background-color: pink;
+}
+
+.page-number.active {
+  background-color: pink;
+  border-color: pink;
+}
+
+/* Стили для скрытия/показа строк */
+.hide {
+  display: none;
+}
+
+.show {
+  display: table-row;
+}
+
