@@ -2,7 +2,7 @@ import TableHead from './TableHead.js';
 import TableBody from './TableBody.js';
 import Filter from './Filter.js';
 import Sort from './Sort.js';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 /*
  компонент, выводящий на страницу таблицу
  пропсы:
@@ -15,6 +15,11 @@ const Table = (props) => {
     const [sortedData, setSortedData] = useState(props.data);
     const [resetKey, setResetKey] = useState(0);
     
+    useEffect(() => {
+        // При изменении отфильтрованных данных уведомляем родительский компонент
+        props.onFilterChange && props.onFilterChange(filteredData);
+    }, [filteredData, props.onFilterChange]);
+
     const changeActive = (event) => {
         setActivePage(event.target.innerHTML);
     };
